@@ -17,3 +17,15 @@ function unDo() {
     document.getElementById("image").innerHTML =
         "Hover over an image below to display here.";
 }
+
+function addTabindex() {
+    console.log("addTabindex function triggered");
+
+    let images = document.querySelectorAll(".preview");
+
+    for (let i = 0; i < images.length; i++) {
+        images[i].setAttribute("tabindex", "0");
+    }
+}
+
+window.addEventListener("load", addTabindex);
